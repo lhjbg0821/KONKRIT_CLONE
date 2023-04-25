@@ -38,14 +38,14 @@ const Header = ({ account, setAccount }) => {
     }
   };
   return (
-    <header className="max-w-screen-xl mx-auto px-4 flex justify-between font-bold">
+    <header className="max-w-screen-xl mx-auto pt-4 px-4 flex justify-between font-bold">
       <Link to="/">
         <div className="flex iems-center text-main">
           <GiChessKing size={28} />
           <div className="ml-1 text-xl">Ble-Chess</div>
         </div>
       </Link>
-      <div className="flex items-center">
+      <div className="flex items-center ">
         {/* 랜더링 해야되니까 앤드연산자 */}
         {coinPrice && (
           <ul className="flex text-gray-400 text-sm">
