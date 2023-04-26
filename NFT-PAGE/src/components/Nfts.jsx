@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import NftCard from "./NftCard";
 
-const Nfts = ({ page }) => {
+const Nfts = ({ page, mintedNft }) => {
   const [selectedPage, setSelectedPage] = useState(1);
   const [nfts, setNfts] = useState();
 
@@ -63,6 +64,22 @@ const Nfts = ({ page }) => {
   return (
     <div className="max-w-screen-xl mx-auto pt-4">
       <div>{pageComp()}</div>
+      <ul className="mt-8 grid grid-cols-1 xl:grid-cols-2 justify-items-center gap-8">
+        {nfts ? (
+          nfts.map((v, i) => {
+            return (
+              <NftCard
+                key={i}
+                tokenId={v.tokenId}
+                metadata={v.metadata}
+                mintedNft={mintedNft}
+              />
+            );
+          })
+        ) : (
+          <div>로딩중입니다...</div>
+        )}
+      </ul>
     </div>
   );
 };
