@@ -59,7 +59,7 @@ const Header = ({ account, setAccount }) => {
           </ul>
         )}
         {account ? (
-          <div className="flex items-center p-2 bg-gray-800 rounded-full">
+          <div className="flex items-center p-2 bg-gray-800 rounded-full ml-4">
             <div className="bg-main w-6 h-6 rounded-full flex justify-center items-center">
               <BsFillBookmarkHeartFill />
             </div>
